@@ -1,9 +1,11 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
+import {useSelector} from "react-redux";
+
 import {Route, Routes, Outlet, Navigate, useLocation} from "react-router-dom"
 import Login from "Scenes/Login";
-import MainLayout from "../Layouts/MainLayout";
-import {useSelector} from "react-redux";
+import MainLayout from "Layouts/MainLayout";
+import Plan from "Scenes/Plan";
 
 const RootRouter = () => {
   const [redirectLocation, setRedirectLocation] = useState();
@@ -33,6 +35,9 @@ const RootRouter = () => {
     <Routes>
       <Route path={"/login"} element={renderForGuestUser(<MainLayout/>)}>
         <Route index element={<Login/>}/>
+      </Route>
+      <Route path={"/plan"} element={<MainLayout/>}>
+        <Route index element={<Plan/>}/>
       </Route>
     </Routes>
   );

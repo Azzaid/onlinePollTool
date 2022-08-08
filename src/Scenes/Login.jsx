@@ -8,7 +8,7 @@ import {useDispatch} from "react-redux";
 import {userLoggedIn} from "store/userSlice"
 
 const StyledLoginPage = styled.div`
-  background-color: ${props => props.theme.partBackgrounColor};
+  background-color: ${props => props.theme.infoCardBackgroundColor};
 `
 
 const LoginPage = (props) => {

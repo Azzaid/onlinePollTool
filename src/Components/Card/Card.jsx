@@ -1,4 +1,4 @@
-import React, {useContext, useState} from "react";
+import React, {useContext, useEffect, useState} from "react";
 
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
@@ -57,6 +57,12 @@ const StyledCard = styled.div`
  * />
  */
 const CardWithPropTypes = (props) => {
+    useState
+
+    useEffect(() => {}, [])
+
+    const createSMTH
+
     return (
         <StyledCard percentDone={Math.floor(Math.random()*100)}>
             <div className={'cardHeader'}>
@@ -66,6 +72,7 @@ const CardWithPropTypes = (props) => {
                 {props.cardText}
             </div>
             <div className={'cardFooter'}>
+                <button onClick={() => {props.deleteCard(props.cardID)}}>Delete me</button>
             </div>
         </StyledCard>
     )

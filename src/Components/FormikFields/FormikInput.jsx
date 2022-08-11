@@ -9,12 +9,11 @@ const StyledFormikInput = styled.div`
 const FormikInput = (props) => {
     const [field, meta, helpers] = useField(props.name);
 
-
     const inputProps = {...field, ...props};
     console.log("input props is", inputProps);
   return (
-    <StyledFormikInput>
-        <input type={"text"} {...field} {...props}/>
+    <StyledFormikInput dataTestid={props.name}>
+        <input type={"text"} {...field} {...props} />
     </StyledFormikInput>
   );
 }

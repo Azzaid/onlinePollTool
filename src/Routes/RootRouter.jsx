@@ -39,6 +39,10 @@ const RootRouter = () => {
       <Route path={"/plan"} element={<MainLayout/>}>
         <Route index element={<Plan/>}/>
       </Route>
+      <Route path={"/resumeBuilder"} element={<MainLayout/>}> /resumeBuilder/new /resumeBuilder/12312312
+        <Route path={"new"} element={<Plan/>}/>
+        <Route path={":resumeID"} element={<Plan/>}/>
+      </Route>
     </Routes>
   );
 }
